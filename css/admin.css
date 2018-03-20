@@ -1,0 +1,259 @@
+/* Body */
+body {
+  background:rgb(26, 27, 28) ;
+  margin: 0;
+}
+
+/* Top navbar */
+.navbar {
+  overflow: hidden;
+  background-color: rgba(51,51,51,0.5);
+  margin-bottom: 85px;
+}
+
+/* Left elements of navbar */
+.navbar ul li a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Merriweather', serif;
+  }
+
+/* Right elements of navbar */
+.navbar ol li a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Merriweather', serif;
+  }
+
+/* Navbar modifiers */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: rgb(200,70,80);
+  color: white;
+}
+
+/* First title */
+.container-first {
+  display:flex;
+  justify-content: center;
+}
+
+/* First title modifier */
+.h1-text {
+  font-family: 'Poppins', sans-serif;
+  font-size:30px;
+  color:white;
+}
+
+/* Separating bar */
+hr.style-four {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+    margin-bottom:30px;
+    margin-top:50px;
+    width:75%;
+}
+
+/* Images */
+.container-imgs {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  color:white;
+}
+
+.container-imgs .container-petition {
+  float:left;
+  width:30%;
+  margin:1.66%;
+}
+
+.container-imgs .container-petition img {
+  width:100%;
+  height:14rem;
+}
+  
+.container-imgs .container-petition h1 {
+  text-align:center;
+  font-size: 25px;
+  margin-top:70px;
+}
+
+/* Expiration date and no of signatures */
+.expires {
+  float:left;
+  color: rgb(255, 0, 42);
+ }
+
+ .signatures {
+  float:right;
+  color: rgb(255, 105, 40)x;
+ }
+
+/* Approval/Dissaproval and Edit/Delete buttons */
+.submit-leftbtn {
+  margin-top :3px;
+  padding: 5px;
+  font-family: 'Lato', sans-serif;
+  border-radius: 5px;
+  border: 1px solid rgba(152,12,250,0.5);
+  width: 35%;
+  background-color: rgb(213, 218, 226);
+  font-size: 18px;
+  background-color: rgb(85, 247, 74);
+  cursor: pointer;
+ }
+
+ .submit-rightbtn {
+  margin-top: 3px;
+  padding: 5px;
+  font-family: 'Lato', sans-serif;
+  border-radius: 5px;
+  border: 1px solid rgba(152,12,250,0.5);
+  width: 35%;
+  background-color: rgb(213, 218, 226);
+  font-size: 18px;
+  float:right;
+  background-color: rgb(229, 48, 81);
+  cursor:pointer;
+ }
+
+ /* Name of the author */
+.created-by {
+  display:flex;
+  justify-content: center;
+  color:rgb(0, 128, 170);
+}
+
+/* Search bar */
+ .container-search {
+  display:flex;
+  justify-content: flex-end;
+  margin-right:20%;
+  margin-top:5%;
+}
+
+input[type=search] {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  padding:3px;
+  margin-right:1%;
+}
+
+/* Dropdown button */
+.container-select
+{
+  margin-left: 50px;
+  margin-bottom:20px;
+}
+
+.container-select select {
+  padding: 5px;
+  width:150px;
+}
+
+/* Footer */
+ .footer {
+  background-color: rgb(0, 0, 0);
+  width:100%;
+}
+
+.center-footer {
+  font-size: 20px;
+  padding-top: 25px;
+  color:white;
+}
+
+.center-footer li {
+  display:flex;
+  justify-content: center;
+}
+
+.right-footer {
+  display:flex;
+  justify-content: center;
+  padding-bottom:25px;
+  margin-top: 20px;
+}
+
+.right-footer li a img {
+  margin-right:20px;
+  margin-left:50px;
+  margin-bottom:10px;
+}
+
+.footer ul {
+  margin-right:23px;
+}
+
+.right-footer li img {
+  width:40px;
+}
+
+.right-footer li {
+  float:left;
+}
+
+/* Footer lists */
+li {
+  list-style: none;
+}
+
+ul {
+  padding:0;
+  margin: 0;
+}
+
+ol {
+  padding:0;
+  margin: 0;
+}
+
+/* Footer modifiers */
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.fade:hover {
+  opacity: 0.5;
+}
+
+/* Responsiveness */
+@supports (display: flex) {
+  @media screen and (max-width: 700px) {
+    .container-imgs {
+    display:flex;
+    flex-direction: column;
+    }
+
+    .container-imgs .container-petition {
+      width:70%;
+      margin:0 auto;
+      margin-top:20px;
+      margin-bottom: 30px;
+    }
+
+
+    .container-imgs .container-petition img {
+     width:100%;
+      height:11rem;
+    }
+  }
+}
