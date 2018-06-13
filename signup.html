@@ -5,16 +5,17 @@
 	<title>Sign Up</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/signup.css">
+	<link rel="stylesheet" type="text/css" href="signup.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<script src="alert.js"></script>
 </head>
 <body>
 	<div class="navbar">
 		<ul>
   			<li><a class="active" href="mainpage.html">Home</a></li>
-  			<li><a href="petitions.html">Petitions</a></li>
-  			<li><a href="inscriereformular.html">Create Petition</a></li>
+  			<li><a href="java:void" onclick="showalert()">Petitions</a></li>
+  			<li><a href="java:void" onclick="showalert()">Create Petition</a></li>
   		</ul>
   		<ol>
   			<li><a href="login.html">Login</a></li>
@@ -23,25 +24,25 @@
 	</div>
 	
 	<div class="container-logo">
-		<img src="images/ogol.png">
+		<img src="ogol.png">
 	</div>
 
 	<hr class="style-four">
 
-	<form>
+	<form action = "signup.php" method = "POST" >
 		<div class="container-fn">
-			<input class="fn" type="text" placeholder="First Name" required>
+			<input name="firstname" class="fn" type="text" placeholder="First Name" required>
 		</div>
 		<div class="container-ln">
-			<input class="ln" type="text"  placeholder="Last Name" required>
+			<input name="lastname" class="ln" type="text"  placeholder="Last Name" required>
 		</div>
 
 		<div class="container-username">
-			<input class="username" type="text" placeholder="Username" required>
+			<input name="username" class="username" type="text" placeholder="Username" required>
 		</div>
 
 		<div class="container-username">
-			<input class="password" placeholder=" Password" type="password"  minlength="5" maxlength="10" required>
+			<input name="password" class="password" placeholder=" Password" type="password"  minlength="5" maxlength="10" required>
 		</div>
 
 		<div class="container-birthday">
@@ -220,9 +221,9 @@
 
 	<div class="container-gender">
 				<label class="signup-text" for="m">Male</label>
-				<input class="radio-btn" id="m" type="radio" name="test" required >	
+				<input name="radio" class="radio-btn" id="m" value="Male" type="radio" required >	
 				<label class="signup-text" for="f">Female</label>
-				<input class="radio-btn" id="f" type="radio" name="test">
+				<input value="Female" name="radio" class="radio-btn" id="f" type="radio">
 		</div>
 
 	<div class="container-singup">
