@@ -5,9 +5,6 @@ if($connect -> connect_error)
 {
 	die('connection failed bruh');
 }
-else 
-{
-}
 
 require_once("tcpdf/tcpdf.php");
 $pdf = new TCPDF();

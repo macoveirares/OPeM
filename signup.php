@@ -6,10 +6,6 @@ if($connect -> connect_error)
 {
 	die('connection failed bruh');
 }
-else 
-{
-	echo 'connection worked';
-}
 
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
@@ -30,9 +26,5 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 	{
 	header("location: login.html");
 	}
-	else 
-{
-	echo "sugi kuku";
-}
 }
 ?>

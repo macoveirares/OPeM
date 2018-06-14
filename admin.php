@@ -14,7 +14,7 @@
 	<div class="navbar">
   		<ol>
         <li><a href="mainpage.html">Logout</a></li>
-  			<li><a href="admin.html">Admin</a></li>
+  			<li><a href="admin.php">Admin</a></li>
   		</ol>
 	</div>
 	
@@ -86,9 +86,9 @@
       </div>
       <div class="right-footer">
         <ul>
-          <li><a href=""><img class="fade" src="http://sundevilgymnastics.com/wp-content/uploads/2016/11/FB-Icon.png"></a></li>
-          <li><a href=""><img class="fade" src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/Twitter-icon.png"></a></li>
-          <li><a href=""><img class="fade" src="http://thoughtmatter.com/wp-content/uploads/2016/05/instagram_logo.png"></a></li>
+          <li><a href="https://www.facebook.com"><img class="fade" src="FB-Icon.png"></a></li>
+          <li><a href="https://www.twitter.com"><img class="fade" src="Twitter-icon.png"></a></li>
+          <li><a href="https://www.instagram.com"><img class="fade" src="instagram_logo.png"></a></li>
         </ul>
       </div>
     </div>
