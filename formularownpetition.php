@@ -6,15 +6,12 @@ if($connect -> connect_error)
 {
 	die('connection failed bruh');
 }
-else 
-{
-}
 
 $name=$_SESSION['name'];
 $id = $_GET['id'];
 $_SESSION['id']=$id;
 
-$sql = "SELECT title,description from petitions where id=$id";
+$sql = "SELECT title,description from petitions where id= '" . $id . "'";
 
 $result = $connect->query($sql);
 
@@ -44,7 +41,7 @@ if($result -> num_rows> 0)
 
 if (isset($_POST['edit']))
 {
-	$userid="SELECT id from users where username='$name'";
+	$userid="SELECT id from users where username='" . $name . "'";
 	$result2 = $connect->query($userid);
 	if($result2 -> num_rows> 0)
 	{
@@ -53,3 +50,4 @@ if (isset($_POST['edit']))
 }
 
 ?>
+

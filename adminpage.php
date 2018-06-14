@@ -5,11 +5,6 @@ if($connect -> connect_error)
 {
 	die('connection failed bruh');
 }
-else 
-{
-}
-
-
 
 $sql="SELECT id,title,image FROM petitions where isApproved=0";
 
@@ -25,14 +20,12 @@ $result = $connect->query($sql);
 			echo '<h1>';
 			echo $row['title'];
 			echo '</h1>';
-			echo '<a href="modelformular.php?id=' . $row['id'] . '"><img src="';
+			echo '<a href="modelformular.php?id=' . $row['id'] . '"><img src="images/';
 			echo $row['image'];
 			echo '"></a>';
 			echo '</div>';
 			echo '</form>';
 		}
 	}
-
-
 
 ?>

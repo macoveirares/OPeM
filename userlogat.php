@@ -72,9 +72,9 @@
       </div>
       <div class="right-footer">
         <ul>
-          <li><a href=""><img class="fade" src="FB-icon.png"></a></li>
-          <li><a href=""><img class="fade" src="Twitter-icon.png"></a></li>
-          <li><a href=""><img class="fade" src="instagram_logo.png"></a></li>
+         <li><a href="https://www.facebook.com"><img class="fade" src="FB-Icon.png"></a></li>
+          <li><a href="https://www.twitter.com"><img class="fade" src="Twitter-icon.png"></a></li>
+          <li><a href="https://www.instagram.com"><img class="fade" src="instagram_logo.png"></a></li>
         </ul>
       </div>
     </div>

@@ -6,13 +6,10 @@ if($connect -> connect_error)
 {
 	die('connection failed bruh');
 }
-else 
-{
-}
 
 $id = $_GET['id'];
 
-$sql = "SELECT title,description from petitions where id=$id";
+$sql = "SELECT title,description from petitions where id='" . $id . "'";
 
 $result = $connect->query($sql);
 
@@ -43,15 +40,15 @@ if($result -> num_rows> 0)
 
 if (isset($_POST['approve']))
 {
-	$update="UPDATE petitions SET isApproved=1 WHERE id=$id";
+	$update="UPDATE petitions SET isApproved=1 WHERE id='" . $id . "'";
 	$connect->query($update);
 	header("location:admin.php");
 }
 else if(isset($_POST['disapprove']))
 {
-	$deleteutp="DELETE FROM usertopetitions WHERE petitionId=$id";
+	$deleteutp="DELETE FROM usertopetitions WHERE petitionId='" . $id . "'";
 	$connect->query($deleteutp);
-	$delete="DELETE FROM petitions WHERE id = $id";
+	$delete="DELETE FROM petitions WHERE id = '" . $id . "'";
 	if($connect->query($delete)==true)
 	{
 		header("location:admin.php");

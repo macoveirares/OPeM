@@ -3,14 +3,11 @@
 
 if($connect -> connect_error)
 {
-	die('connection failed bruh');
+	die('Connection failed');
 }
-
 
 echo '<li><a href="userpage.php?username='. $_SESSION['name'] .'">';
 echo $_SESSION['name'];
 echo '</a></li>';
-
-
 
 ?>

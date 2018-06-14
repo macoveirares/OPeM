@@ -6,23 +6,20 @@ if($connect -> connect_error)
 {
 	die('connection failed bruh');
 }
-else 
-{
-}
 
 error_reporting(0);
 ini_set('display_errors', 0);
 
 $uname= $_SESSION['name'];
 
-$uid="SELECT id from users where username='$uname'";
+$uid="SELECT id from users where username='" . $uname . "'";
 $result2= $connect->query($uid);
 if($result2 -> num_rows> 0)
 {
 	while($rowid=$result2->fetch_assoc())
 	{
 		$id=$rowid['id'];
-		$sql="SELECT p.id,p.title,p.image from petitions p join signatures s on p.id=s.IDPetition where s.IDUser=$id";
+		$sql="SELECT p.id,p.title,p.image from petitions p join signatures s on p.id=s.IDPetition where s.IDUser='" . $id . "'";
 		$result = $connect->query($sql);
 
 		if($result -> num_rows> 0)
@@ -34,7 +31,7 @@ if($result2 -> num_rows> 0)
 				echo '<h1>';
 				echo $row['title'];
 				echo '</h1>';
-				echo '<a href="formularUser.php?id=' . $row['id'] . '"><img src="';
+				echo '<a href="formularUser.php?id=' . $row['id'] . '"><img src="images/';
 				echo $row['image'];
 				echo '"></a>';
 				echo '</div>';
@@ -43,6 +40,4 @@ if($result2 -> num_rows> 0)
 		}
 	}
 }
-
-
  ?>
